@@ -4,8 +4,8 @@ This repo contains code to scrape player statistics from the achahockey.org web 
 
 ## Dependencies
 
-*[Python 2.7](http://www.python.org/getit/)
-*[Scrapy](http://doc.scrapy.org/en/latest/intro/install.html)
+* [Python 2.7](http://www.python.org/getit/)
+* [Scrapy](http://doc.scrapy.org/en/latest/intro/install.html)
 
 ## Running the Code
 
