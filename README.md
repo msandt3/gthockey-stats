@@ -13,6 +13,12 @@ After cloning the repo you can scrape data as follows:
 	
 	$ scrapy crawl acha
 
+There is now an automated script for running the scraping routines as well. This is for future use in CGI on a nearlyfreespeech web server. 
+
+	$ python crawl.py
+
+The previous will automatically scrape and store the data in a json file
+
 ## Saving the Results
 
 Scrapy supports several standards for storing scraped data. In order to store them in JSON, CSV or XML execute the respective command:
