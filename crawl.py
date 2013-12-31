@@ -6,12 +6,18 @@ from scrapy.xlib.pydispatch import dispatcher
 from stats.spiders.acha import AchaSpider
 
 
+
+
 def stop():
 	reactor.stop()
 
+# listen for spider closed signal & stop reactor
 dispatcher.connect(stop, signal=signals.spider_closed)
+
+
+
 spider = AchaSpider()
-crawler = Crawler(Settings())
+crawler = Crawler(Settings({'LOG_ENABLED':'True', 'ITEM_PIPELINES':'stats.pipelines.StatsPipeline'}))
 crawler.configure()
 crawler.crawl(spider)
 crawler.start()
